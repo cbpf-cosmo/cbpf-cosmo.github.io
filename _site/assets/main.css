@@ -275,3 +275,48 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .il { color: #099; }
 
 /*# sourceMappingURL=main.css.map */
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .header-logo {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+  }
+  
+  .title-row {
+    display: flex;
+    justify-content: space-between; /* título à esquerda, idioma à direita */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .site-title {
+    margin: 0;
+    flex: 1;  /* ocupa o espaço restante */
+  }
+  
+  .lang-switch a {
+    font-family: monospace;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .lang-switch img {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  header {
+    background-image: url("../images/bg1.jpg"); /* caminho da sua imagem */
+    background-size: cover;     /* cobre toda a área */
+    background-position: center;/* centraliza */
+    background-repeat: no-repeat;
+    color: white; /* garante contraste com o fundo */
+    padding: 20px;
+  }
+
