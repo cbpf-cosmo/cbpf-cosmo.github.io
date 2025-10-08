@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Seminários e Journal Club"
+---
+	  <h2>{{page.title}}</h2>
+	  <h3>A partir de 2024</h3>
+
+      <section>
+      
+      <ul class="seminar-list">
+      
+    
+      {% for seminar in site.seminars reversed %}
+      
+      	{% if seminar.type == "seminar" %}
+      	 <li class="seminar-card">
+      	 <div class="seminar-type">Seminário</div>
+      	 <div class="seminar-content">
+      	 	<div class="seminar-speaker">{{seminar.speaker}}</div>
+            <div class="seminar-affiliation">{{seminar.affiliation}}</div>
+            <div class="seminar-title"><q>{{seminar.title}}</q></div>
+            <div class="seminar-details">
+              <span>Data:</span> {{seminar.datestr}}<!--{{seminar.date | date_to_string}}--><br>
+              <span>Horário:</span> {{seminar.time}}<br>
+              <span>Local:</span> {{seminar.place}}
+            </div>
+            <div class="seminar-abstract"><span>Abstract:</span>
+             {{seminar.content | markdownfy}}
+            </div>
+      	 </div>
+      	 </li>
+      	{% else %}
+      	 <li class="seminar-card">
+      	 <div class="seminar-type">Journal Club</div>
+      	 <div class="seminar-content">
+      	 	<div class="seminar-speaker">{{seminar.speaker}}</div>
+            <div class="seminar-affiliation">{{seminar.affiliation}}</div>
+            <div class="seminar-title">Título do artigo:  <q>{{seminar.title}}</q></div>   
+            <div class="seminar-authors">Autores: {{seminar.authors}}  
+            <div class="seminar-article">
+              <span>Artigo:</span> 
+              {% for article in seminar.references %}
+                <a href={{article.url}} target="_blank">{{article.label}}</a>;
+              {% endfor %}
+            </div>
+            <div class="seminar-details">
+              <span>Data:</span> {{seminar.datestr}}<!--{{seminar.date | date_to_string}}--><br>
+              <span>Horário:</span> {{seminar.time}}<br>
+              <span>Local:</span> {{seminar.place}}
+            </div>
+            <div class="seminar-abstract"><span>Abstract do artigo:</span>
+             {{seminar.content | markdownfy}}
+            </div>
+      	 </div>
+      	 </li>      	
+      	{% endif %}
+      {% endfor %}
+      
+      </ul>
+    </section>

@@ -1,0 +1,8 @@
+- name: Sobre a QCD-RJ
+  link: index.html
+- name: Membros
+  link: members.html
+- name: Seminários e Journal Club
+  link: seminars.html
+- name: Agenda de atividades
+  link: calendar.html

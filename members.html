@@ -1,0 +1,67 @@
+---
+layout: default
+title: "Membros"
+---
+
+	<membersarea>
+	
+	<h2>Membros permanentes</h2>
+	
+      <ul class="members-list">
+      
+        {% for member in site.members %}
+        
+        	{% if member.category == "permanent" %}
+        		<li class="member-card">
+        		
+        		<div class="member-name">{{member.name}}
+            		<a href={{member.orcid}} aria-label="Ver registro ORCID" target="_blank">
+					<img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+					</a>
+          		</div>
+          		<div class="member-role">{{member.role}}</div>
+          		<div class="member-institution">{{member.institution}}</div>
+          		<div class="member-lattes">
+          			<a href={{member.lattes}} aria-label="Ver currículo Lattes" target="_blank">
+						Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          			</a>
+          		</div>
+        		</li>
+        	{% endif %}
+        		
+        {% endfor %}
+      
+      </ul>
+      
+      
+	  
+	  
+	  <h2>Estudantes</h2>
+	  
+      <ul class="members-list">
+      
+        {% for member in site.members %}
+        
+        	{% if member.category == "student" %}
+        		<li class="member-card">
+        		
+        		<div class="member-name">{{member.name}}
+            		<a href={{member.orcid}} aria-label="Ver registro ORCID" target="_blank">
+					<img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+					</a>
+          		</div>
+          		<div class="member-role">{{member.role}}</div>
+          		<div class="member-institution">{{member.institution}}</div>
+          		<div class="member-lattes">
+          			<a href={{member.lattes}} aria-label="Ver currículo Lattes" target="_blank">
+						Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          			</a>
+          		</div>
+        		</li>
+        	{% endif %}
+        		
+        {% endfor %}
+      
+      </ul>
+      
+	 </membersarea>
