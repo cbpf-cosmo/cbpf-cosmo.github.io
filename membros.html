@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMO-CBPF</title>
+  <link rel="stylesheet" href="styles.css">
+  
+	<link rel="icon" type="image/png" href="logo/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="logo/favicon/favicon.svg" />
+	<link rel="shortcut icon" href="logo/favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="logo/favicon/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="COSMO- CBPF" />
+	<link rel="manifest" href="logo/favicon/site.webmanifest" />
+
+  <style>
+    /* ---- Flip 3D ---- */
+    .member-card {
+      perspective: 1000px;
+      width: 220px;
+      min-height: 300px;
+      margin: 10px;
+    }
+
+    .member-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .member-card.flipped .member-inner {
+      transform: rotateY(180deg);
+    }
+
+    .member-front, .member-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .member-front img.clickable-photo {
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .member-front img.clickable-photo:hover {
+      transform: scale(1.05);
+    }
+
+    .member-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      padding: 15px;
+    }
+
+    .btn-back {
+      margin-top: 12px;
+      background-color: #ccc;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: #999;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <header>
+  <a class="header-link" href="index.html">
+  <div class="header-brand">
+    <img src="images/logo_4.png" alt="cosmo_logo" class="header-logo" style="width:185px; height:185px; object-fit: cover;">
+    <div>
+      <h1 class="site-title">Coordenação de Cosmologia, Astrofísica e Interações Fundamentais do CBPF</h1> 
+    </div>
+  </div>
+  </a>
+  </header>
+ 
+   <nav>
+    <ul>
+      <!-- <li><a href=sobre.html>Sobre a COSMO</a></li> -->
+      <li><a href=membros.html >Membros</a></li>
+      <li><a href=pesquisa.html  >Pesquisa</a></li>
+      <li><a href=calendar.html  >Agenda de atividades</a></li>
+      <!-- <li><a href=anuncios.html  >Anúncios</a></li> -->
+      <li><a href=index_english.html ><img src="https://icons.iconarchive.com/icons/wikipedia/flags/24/GB-United-Kingdom-Flag-icon.png">English</a></li>
+    </ul>
+  </nav>
+
+  <main>
+	<membersarea>
+	<h2>Pesquisadores</h2>
+	
+    <ul class="members-list">
+
+      <!-- ==== Exemplo modificado (Emil Medeiros) ==== -->
+<ul class="members-list">
+
+  <!-- ==== Emil Medeiros ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Emil Medeiros
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Professor Adjunto</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Emil Medeiros e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Felipe Tovar ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Felipe Tovar
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Professor</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Felipe Tovar e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Gabriela Antunes Marques ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Gabriela Antunes Marques
+          <img src="images/thumbs/gabriela.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/0000-0002-8571-8876" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisadora Adjunta</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/0675863411047105/\Lattes" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>
+		Cosmologia observacional; CMB; Estrutura em grande escala; Métodos estatísticos e machine learning</p>
+		<p>Maiores informações no <a href="https://gabrielaamarques.github.io/"> Site Pessoal </a> </p>
+			
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Guilherme Brando de Oliveira ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Guilherme Brando de Oliveira
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador Associado</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Guilherme Brando de Oliveira e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Jose Helayel ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Jose Helayel
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador Titular</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Jose Helayel e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Leonardo Chataignier ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Leonardo Chataignier
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Leonardo Chataignier e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Louis Legrand ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Louis Legrand
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador Visitante</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Louis Legrand e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Martin Makler ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Martin Makler
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador Titular</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Martin Makler e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Mauricio Hippert ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Mauricio Hippert
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Mauricio Hippert e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Miguel Quartin ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Miguel Quartin
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Professor</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Miguel Quartin e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Nelson Pinto-Neto ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Nelson Pinto-Neto
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador Titular</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Nelson Pinto-Neto e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Philipe de Fabritiis ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Philipe de Fabritiis
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:185px; height:185px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Philipe de Fabritiis e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Sebastião Alves Dias ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Sebastião Alves Dias
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Sebastião Alves Dias e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+  <!-- ==== Sérgio José Barbosa Duarte ==== -->
+  <li class="member-card">
+    <div class="member-inner">
+      <div class="member-front">
+        <div class="member-name">
+          Sérgio José Barbosa Duarte
+          <img src="images/thumbs/cbpf.png" alt="foto" class="clickable-photo"
+               style="width:150px; height:150px; object-fit:cover;">
+          <a href="https://orcid.org/" target="_blank">
+            <img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/>
+          </a>
+        </div>
+        <div class="member-role">Pesquisador Titular</div>
+        <div class="member-lattes">
+          <a href="http://lattes.cnpq.br/" target="_blank">
+            Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+          </a>
+        </div>
+      </div>
+      <div class="member-back">
+        <p>Texto sobre Sérgio José Barbosa Duarte e palavras-chaves</p>
+        <button class="btn-back">Voltar</button>
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+
+	<h2>Estudantes</h2>
+    <ul class="members-list">
+      <li class="member-card">
+        <div class="member-inner">
+          <div class="member-front">
+            <div class="member-name">Osvaldo Ferreira
+              <a href="https://orcid.org/0000-0002-6711-8308" target="_blank"><img src="images/ORCID-iD_icon_vector.svg" alt="iD ORCID"/></a>
+            </div>
+            <div class="member-role">Estudante de doutorado</div>
+            <div class="member-institution">Universidade Federal do Rio de Janeiro</div>
+            <div class="member-lattes">
+              <a href="http://lattes.cnpq.br/6790966492250263" target="_blank">
+                Currículo Lattes<img src="images/lattes-logo-2.png" alt="iD Lattes"/>
+              </a>
+            </div>
+          </div>
+          <div class="member-back">
+            <p>Descrição opcional aqui.</p>
+            <button class="btn-back">Voltar</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+	</membersarea>
+  </main>
+
+  <script>
+    document.querySelectorAll('.member-card').forEach(card => {
+      const photo = card.querySelector('.clickable-photo');
+      const backBtn = card.querySelector('.btn-back');
+
+      if (photo) {
+        photo.addEventListener('click', () => {
+          card.classList.add('flipped');
+        });
+      }
+
+      if (backBtn) {
+        backBtn.addEventListener('click', () => {
+          card.classList.remove('flipped');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -703,3 +703,60 @@ button {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+
+
+.member-card {
+  position: relative;
+  width: 220px;
+  min-height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fdfdfd;
+  transition: transform 0.6s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.member-photo {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.member-photo:hover {
+  transform: scale(1.05);
+}
+
+.member-back {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.member-back.show {
+  display: block;
+}
+
+.member-front.hidden {
+  display: none;
+}
+
+.btn-back {
+  background-color: #ccc;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-back:hover {
+  background-color: #999;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
