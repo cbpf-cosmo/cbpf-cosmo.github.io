@@ -760,3 +760,114 @@ button {
   to {opacity: 1;}
 }
 
+
+
+/* --- ajustes para mobile e tablet --- */
+
+/* Tablets (máx. 1000px) */
+@media (max-width: 1000px) {
+  /* Header */
+  .header-content, .header-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .header-logo {
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  /* Nav menu */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  /* Logos e imagens */
+  .logosbottom {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+  }
+
+  .logo {
+    height: 90px;
+  }
+
+  /* Grid de pesquisa */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    gap: 15px;
+    margin-top: 20px;
+  }
+}
+
+/* Celulares (máx. 600px) */
+@media (max-width: 600px) {
+  /* Header */
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .site-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Nav */
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  /* Logos */
+  .logosbottom {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    gap: 20px;
+  }
+
+  .logo {
+    height: 75px;
+  }
+
+  /* Grid de pesquisa */
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  /* Cartões de membros */
+  .members-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  /* Margens gerais */
+  main {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
