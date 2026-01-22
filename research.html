@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMO-CBPF</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="logo/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="logo/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="logo/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="logo/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="COSMO- CBPF" />
+  <link rel="manifest" href="logo/favicon/site.webmanifest" />
+
+  <style>
+    /* Só para a transição da área expandida */
+    #expanded-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, padding 0.6s ease;
+      background-color: #f9f9f9;
+      margin-top: 30px;
+      border-top: 2px solid #ddd;
+      border-radius: 8px;
+    }
+    #expanded-content.show {
+      max-height: 800px; /* Ajuste conforme o tamanho do texto */
+      padding: 20px;
+    }
+    #expanded-content h3 {
+      margin-top: 0;
+    }
+    #expanded-content button {
+      margin-top: 10px;
+      background-color: #ccc;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #expanded-content button:hover {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <a class="header-link" href="index.html">
+    <div class="header-brand">
+      <img src="images/logo_4.png" alt="cosmo_logo" class="header-logo" style="width:185px; height:185px; object-fit: cover;">
+      <div>
+        <h1 class="site-title">Coordenação de Cosmologia, Astrofísica e Interações Fundamentais do CBPF</h1>
+      </div>
+    </div>
+  </a>
+</header>
+   <nav>
+    <ul>
+    
+      <!-- <li><a href=sobre.html>About COSMO</a></li> -->
+    
+      <li><a href="members.html">Members</a></li>
+    
+      <li><a href="research.html">Research</a></li>
+    
+      <li><a href="calendar.html">Activity Schedule</a></li>
+
+      <!-- <li><a href=anuncios.html>Anouncements</a></li> -->
+
+      <li><a href="index.html"><img src="https://icons.iconarchive.com/icons/wikipedia/flags/24/BR-Brazil-Flag-icon.png">Português</a></li>
+
+    </ul>
+  </nav>
+
+<main>
+  <h2>Pesquisa</h2>
+  <section id="research">
+    <!-- <p>
+      Some of the publications of the group can be found on the ADS with the following query
+      <a href="https://ui.adsabs.harvard.edu/search/...">here</a>.
+    </p> -->
+
+    <section class="grid-container">
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="computacional">
+          <img src="images/thumbs/computacional.png" alt="Computational Cosmology" />
+        </a>
+        <h3>Computational Cosmology</h3>
+        <p></p>
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="observacional">
+          <img src="images/thumbs/desi_cmb_cross.jpg" alt="Observational Cosmology" />
+        </a>
+        <h3> Observational Cosmology</h3>
+        <!-- <p>Simulações numéricas e modelos para compreender a evolução do universo.</p> -->
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="gravquantica">
+          <img src="images/thumbs/Header_Spacetime.jpg" alt="Quantum Gravity" />
+        </a>
+        <h3>Quantum Gravity </h3>
+        <p>Under construction.</p>
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="nuclear">
+          <img src="images/thumbs/interacoes.png" alt="Strong Interactions and Nuclear Physics" />
+        </a>
+        <h3>Strong Interactions and Nuclear Physics</h3>
+        <p>Under construction.</p>
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="ondas">
+          <img src="images/thumbs/gravity.png" alt="Gravitational Waves" />
+        </a>
+        <h3>Gravitational Waves</h3>
+        
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="primordial">
+          <img src="images/thumbs/universe_primordal.png" alt="Primordial Universe" />
+        </a>
+        <h3>Primordial Universe</h3>
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="tardio">
+          <img src="images/thumbs/illustris_box_dmdens_gasvel.png" alt="Late Universe" />
+        </a>
+        <h3>Late Universe</h3>
+        <!-- <p>Universo tardio - energia escura.</p> -->
+      </article>
+
+      <article class="work-item">
+        <a href="#" class="image fit thumb trigger" data-topic="tqc">
+          <img src="images/thumbs/TQC.png" alt="Quantum Field Theory" />
+        </a>
+        <h3>Quantum Field Theory</h3>
+        <p>Under construction.</p>
+      </article>
+    </section>
+
+    <!-- Área expandida que aparece ao clicar -->
+    <section id="expanded-content"></section>
+
+  </section>
+</main>
+
+<script>
+  const details = {
+    computacional: `
+<h3>Computational Cosmology</h3>
+<p>Computational Cosmology is a dynamic and essential area of modern cosmology. With the increasing precision and accuracy of Stage IV cosmological surveys, the development of more robust and efficient numerical tools has become indispensable for the calculation of theoretical quantities and for the implementation of advanced statistical methods.</p>
+<p> Our group works on the development and application of codes and algorithms that allow us to extract the maximum amount of information from the smallest cosmological scales, using:   
+<ul class="obs-list">
+      <li><strong>N-body simulations</strong> — to model the evolution of the large-scale structure of the Universe;
+
+<li><strong>Post-processing</strong> — of these simulations, including ray tracing (tracking the path of photons from distant sources to the observer), fast estimators for the computation of summary statistics, and beyond;
+
+<li><strong>Theoretical codes</strong> aimed at computing quantities in perturbation theory beyond linear order.
+
+<li> In addition, we seek to integrate traditional scientific computing techniques with <strong>machine learning</strong> methods, expanding the possibilities for statistical analysis and pushing forward the frontiers of theoretical and observational cosmology
+
+<p>  </p>
+    `,
+    observacional: `
+<h3>Observational Cosmology</h3>
+<p>  
+
+Observational cosmology investigates the origin, composition, structure, and evolution of the
+Universe through precise measurements of its <em>observables</em>. This field integrates
+astronomical observations, large-scale surveys, and cosmological probes with theoretical models
+and numerical simulations to reconstruct the history of the cosmos and test fundamental
+hypotheses. Among the key cosmological observables are:
+
+<ul class="obs-list">
+  <li><strong>Cosmic Microwave Background (CMB)</strong> — relic radiation from the primordial Universe;</li>
+  <li><strong>Galaxy distributions</strong> — large-scale maps and their correlations that reveal the formation and evolution of structure;</li>
+  <li><strong>Gravitational lensing</strong> — distortions in galaxy and CMB images that trace the distribution of total matter (baryonic + dark);</li>
+  <li><strong>Galaxy clusters and other structures</strong> — essential for testing non-linear evolution and the formation of large-scale structures;</li>
+  <li><strong>Type Ia supernovae</strong> — standard probes for measurements of cosmic expansion and the history of acceleration.</li>
+</ul>
+
+In recent decades, increasingly extensive surveys of the large-scale structure and the CMB have transformed cosmology into a precision science.
+These experiments allow us to measure cosmological parameters with high accuracy, test dark energy and dark matter models, and investigate the fundamental laws of gravitation on cosmological scales.
+Currently, the main challenges of observational cosmology include systematic control of astrophysical and experimental uncertainties, the consistent combination of different cosmological probes,
+and the understanding of tensions between independent measurements — such as the discrepancy between estimates of the Hubble constant (H₀).
+        Our group develops statistical methods, analysis pipelines, simulations, and studies of
+    cross-correlations between probes. The main research lines include:
+        
+<ul>
+  <li>Gravitational lensing analyses in different regimes — micro, weak, and strong;</li>
+  <li>Analyses of the primordial CMB and its secondary effects;</li>
+  <li>Cross-correlations between the CMB and its secondary effects with large-scale structure;</li>
+  <li>Constraints on alternative cosmological models and on dark matter/dark energy properties;</li>
+  <li> Validation of methods using mocks and real data, and investigation of systematic effects.</li>
+</ul>
+Among the surveys in which the group has direct involvement or experience, we highlight:
+        </p>
+<ul>
+  <li>CMB experiments: <em>Atacama Cosmology Telescope (ACT)</em>, <em>Simons Observatory (SO)</em>;</li>
+  <li>Large-scale structure surveys: <em>Euclid</em>, <em>Rubin Observatory Legacy Survey of Space and Time
+Dark Energy Science Collaboration (LSST / DESC)</em>  
+  <li>Analyses using public data: <em>Planck</em>, <em>HSC</em>, DESI, <em>WiseSuperCosmos</em>, <em>SDSS</em>, <em>Dark Energy Survey</em>, and other public datasets.</li>
+</ul>
+
+</p>
+
+    `,
+    gravquantica: `
+      <h3>Quantum Gravity</h3>
+      <p>Under construction.</p>
+    `,
+    nuclear: `
+      <h3>Strong Interactions and Nuclear Physics</h3>
+      <p>Under construction.</p>
+    `,
+    ondas: `
+<h3>Gravitational Waves</h3>
+<p>  
+Gravitational waves (GWs) offer a new and fundamental window into the Universe, constituting one of the pillars of modern multi-messenger astronomy.
+Predicted by general relativity, these perturbations of spacetime propagate virtually unaffected by matter,
+preserving pristine information about their sources and allowing access to regions that would otherwise be hidden from electromagnetic observations — from the properties of black holes
+to the interiors of neutron stars, and to pre-recombination physics beyond the cosmic microwave background.
+</p>
+
+<p>Observations from the LIGO, Virgo, and KAGRA detectors have revealed mergers of binary black holes, neutron stars, and mixed black hole–neutron star systems,
+enabling high-precision tests of general relativity in the strong-field regime. In addition, gravitational-wave events act as standard sirens,
+providing an independent and highly promising method to measure cosmological distances and constrain cosmological parameters. Future observatories such as LISA,
+the Einstein Telescope, and the Cosmic Explorer will further expand this frontier, probing thousands of mergers, including those of massive black holes, systems with
+extreme mass ratios, and stochastic backgrounds originating in the primordial Universe.</p>
+
+<p>Our group investigates the emerging field of gravitational-wave cosmology. We develop statistical methods to analyze different classes of gravitational sirens:
+spectral (based on the mass spectrum of compact objects), bright (multi-messenger events with electromagnetic counterparts), and dark sirens, which can be
+cross-correlated with large-scale structure data to measure cosmological parameters. This approach enables model-independent tests across different
+cosmological scenarios and provides complementary constraints on the underlying theory of gravity. We also study other cosmological tests that can be performed using catalogs of
+gravitational-wave events.</p>
+
+<p>Gravitational waves also constitute one of the few direct probes of the primordial Universe. Because they decouple from matter almost immediately after their generation,
+primordial gravitational waves would have traversed the entire cosmic history virtually unaltered, preserving information about processes at energy scales far beyond the reach of terrestrial experiments.
+There are several possible mechanisms for the production of gravitational waves. Our group has particular interest in first-order phase transitions and in gravitational waves induced by second-order scalar fluctuations.
+Our goal is to study the production mechanisms of gravitational waves and test them using large-scale observational constraints.</p>
+
+    `,
+    primordial: `
+<h3>Primordial Universe</h3>
+<p>The primordial Universe provides a unique arena to test physics beyond the Standard Model,
+and currently stands at the forefront of theoretical physics, as it bridges fundamental particle interactions and cosmological observations.</p>
+
+<p>The standard model of cosmology postulates that the Universe originated from an extremely hot, dense, and rapidly expanding state in the distant past.
+The earliest epoch accessible to electromagnetic observations is the cosmic microwave background (CMB), which defines the surface of last scattering and encodes
+the physical conditions of the Universe approximately 14 billion years ago. The term primordial Universe refers to the sequence of physical processes that occurred prior to this epoch.
+These processes can be investigated indirectly through primordial gravitational waves or through their subtle imprints on cosmological observables, such as CMB anisotropies and the large-scale structure of the Universe.</p>
+
+<p>The primordial Universe is characterized by extreme densities and ultra-relativistic energy scales, where the frameworks of particle physics and cosmology become deeply intertwined.
+The group’s research focuses on the dynamics of inflationary expansion, quantum field theory in curved spacetime, and the generation and evolution of primordial perturbations that gave rise
+to the large-scale structure of the Universe. We investigate the origin of cosmic initial conditions through single-field and multi-field inflationary models, as well as through alternative pre–Big Bang scenarios,
+including bouncing cosmologies within quantum gravity and quantum cosmology, and out-of-equilibrium particle production mechanisms. Special emphasis is placed on identifying signatures of
+high-energy physics imprinted on observable quantities, such as primordial non-Gaussianities, stochastic gravitational-wave backgrounds, and relics including primordial black holes and cosmological magnetic fields.</p>
+
+    `,
+    tardio: `
+<h3>Late Universe</h3>
+<p>
+The <strong>Late Universe</strong> corresponds to the period after recombination, when cosmic
+structures — such as galaxies, clusters, and filaments — began to form and evolve under the
+influence of gravity and cosmic expansion. The study of this regime is fundamental to
+understanding the <strong>accelerated expansion of the Universe</strong>, the nature of
+<strong>dark energy</strong>, which dominates the current energy density of the cosmos, or
+possible modifications to the theory of gravitation</strong>.</p>
+
+<p>
+The analysis of structure growth provides one of the key avenues to distinguish between these
+scenarios. The way dark matter organizes over time and how gravity operates across different
+scales allows increasingly precise tests of whether General Relativity remains valid on
+cosmological scales or whether new interactions or dynamical fields are required to explain the
+observed cosmic acceleration.
+</p>
+
+<p>
+The group pursues multiple approaches to investigate this regime of the Universe — both through
+the <strong>analysis and combination of multiple late-time cosmological probes</strong>, and
+through <strong>numerical simulations and alternative models of gravity</strong>. These studies
+aim to improve our understanding of dark energy, dark matter, and the fundamental laws governing
+the evolution of the cosmos.
+</p>
+
+
+    `,
+    tqc: `
+      <h3>Quantum Field Theory</h3>
+      <p>Under construction.</p>
+    `
+  };
+
+  const expanded = document.getElementById("expanded-content");
+
+  document.querySelectorAll(".trigger").forEach(trigger => {
+    trigger.addEventListener("click", e => {
+      e.preventDefault();
+      const topic = trigger.dataset.topic;
+      expanded.innerHTML = details[topic] + `<button id="btn-close">Voltar</button>`;
+      expanded.classList.add("show");
+
+      // Rolar suavemente até a seção expandida
+      expanded.scrollIntoView({ behavior: "smooth" });
+
+      document.getElementById("btn-close").addEventListener("click", () => {
+        expanded.classList.remove("show");
+        expanded.innerHTML = "";
+        window.scrollTo({ top: document.getElementById("research").offsetTop, behavior: "smooth" });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
