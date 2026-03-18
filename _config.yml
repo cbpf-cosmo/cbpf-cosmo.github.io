@@ -56,3 +56,20 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+plugins:
+  - jekyll-sitemap
+```
+
+This automatically generates `https://cbpf-cosmo.github.io/sitemap.xml`, which you can then submit in Google Search Console under **Sitemaps**.
+
+---
+
+## 3. Add a `robots.txt`
+
+Create a `robots.txt` file in the root of your repo to explicitly allow crawling:
+```
+User-agent: *
+Allow: /
+Sitemap: https://cbpf-cosmo.github.io/sitemap.xml
